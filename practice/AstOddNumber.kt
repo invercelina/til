@@ -5,6 +5,6 @@ fun main() {
             for (j in 1..i) {
                 print("*")
             }
-            println("")
+            println()
         }
 }
