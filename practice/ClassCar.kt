@@ -5,9 +5,10 @@ fun main() {
 
     println("현재 속도는 ${car1.getSpeeds()}km/h 입니다.")
 
-    car1.increaseSpeed(20)
-
-    println("현재 속도는 ${car1.getSpeeds()}km/h 입니다.")
+    for (i in 1..10) {
+        car1.increaseSpeed(i)
+        println("현재 속도는 ${car1.getSpeeds()}km/h 입니다.")
+    }
 
     car1.addGas(40)
 }
