@@ -5,7 +5,7 @@ fun main() {
 
     println("현재 속도는 ${car1.getSpeeds()}km/h 입니다.")
 
-    car1.IncreaseSpeed(20)
+    car1.increaseSpeed(20)
 
     println("현재 속도는 ${car1.getSpeeds()}km/h 입니다.")
 
@@ -32,7 +32,7 @@ class Car(val model: String, var speed: Int, var gas: Int, val color: Color) {
         return speed
     }
 
-    fun IncreaseSpeed(acc: Int) {
+    fun increaseSpeed(acc: Int) {
         speed += acc
     }
 
