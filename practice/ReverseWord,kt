@@ -1,0 +1,40 @@
+import java.util.Stack
+// 스택 사용
+val input = "answer"
+fun reverseWord(input: String): String {
+    val stack = Stack<Char>()
+    var output =""
+    for(i in input) {
+        stack.push(i)
+    }
+    while(stack.isNotEmpty()){
+        output += stack.pop()
+    }
+    return output
+}
+// 반복문 하나로
+fun reverseWord2(input: String): String {
+    var output =""
+    for(i in input.length-1 downTo 0) {
+        output += input[i]
+    }
+    return output
+}
+println("answer: ${reverseWord2(input)}")
+// index 가장 처음과 가장 끝을 바꾸면서
+val input: String = "yes"
+
+fun reverseWord(input: String): CharArray {
+    val inputArray = input.toCharArray()
+    var temp:Char
+    for (i in 0 until inputArray.size/2) {
+        temp = inputArray[i]
+        inputArray[i]=inputArray[inputArray.size-1-i]
+        inputArray[inputArray.size-1-i] = temp
+    }
+    return inputArray
+
+}
+println(reverseWord(input))
+println(reverseWord("hello world"))
+println(reverseWord("easy"))
